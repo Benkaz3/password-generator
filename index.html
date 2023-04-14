@@ -1,12 +1,28 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1></h1>
-        <p id="password-one-el"></p>
-        <p id="password-two-el"></p>
-        <button onclick=genPass()>Generate password</button>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate a <span class="green-text">random password</span></h1>
+      <p>Never use an insecure password again.</p>
+      <button onclick="generatePassword()">GENERATE PASSWORD</button>
+      <div class="passwords-container">
+        <p id="password-one-el">password 01</p>
+        <p id="password-two-el">password 02</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
 </html>

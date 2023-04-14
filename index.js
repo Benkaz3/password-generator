@@ -4,32 +4,34 @@ let passwordOneEl = document.getElementById("password-one-el")
 let passwordTwoEl = document.getElementById("password-two-el")
 let passwordOne = []
 let passwordTwo = []
-
-
-
     
-function genPass() {
-    // passwordOneEl.textContent = []
-    // passwordTwoEl.textContent = []
-    function genArr(arr) {
+function generatePassword() {
+    // reset passwords
+    passwordOne = []
+    passwordTwo = []
+    passwordOneEl.textContent = passwordOne
+    passwordTwoEl.textContent = passwordTwo
+    // function to generate random char arrays
+    function getRandomArr(arr) {
     for (let i = 0; i < characters.length; i+=1) {
         let ranIndex = Math.floor(Math.random()*characters.length)
-        if(arr.length < 16) {
+        if(arr.length < 15) {
             arr.push(characters[ranIndex])
             }
         }
     }
-    genArr(passwordOne)
+    // generate random password arrays then render to DOM
+    getRandomArr(passwordOne)
+    passwordOne.textContents = "Password one: "
     for (let i = 0; i < passwordOne.length; i+=1) {
         passwordOneEl.textContent += passwordOne[i]
         }
-    genArr(passwordTwo)
+    getRandomArr(passwordTwo)
     for (let j = 0; j < passwordOne.length; j+=1) {
         passwordTwoEl.textContent += passwordTwo[j]  
     }
 }
 
-console.log(passwordOne)
 
 
 
