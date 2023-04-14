@@ -17,8 +17,9 @@ body {
 }
 
 .container {
-    width: 400px;
-    margin: 10px auto;
+    width: 100vw;
+    max-width: 573px;
+    margin: 0 auto;
     background-color: var(--desertStorm);
     padding: 20px;
     /* text-align: center; */
@@ -58,6 +59,7 @@ form div {
     background-color: var(--gullGray);
     color: var(--desertStorm);
     font-size: 0.9rem;
+    /* max-width: 350px; */
     width: 100%;
     text-align: center;
 }
