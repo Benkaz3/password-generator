@@ -4,6 +4,7 @@ let passwordOneEl = document.getElementById("password-one-el")
 let passwordTwoEl = document.getElementById("password-two-el")
 let passwordOne = []
 let passwordTwo = []
+
     
 function generatePassword() {
     // reset passwords
@@ -11,11 +12,13 @@ function generatePassword() {
     passwordTwo = []
     passwordOneEl.textContent = passwordOne
     passwordTwoEl.textContent = passwordTwo
+    // get value of password length from user 
+    let passwordLengthEl = parseInt(document.getElementById("password-length-el").value)
     // function to generate random char arrays
     function getRandomArr(arr) {
     for (let i = 0; i < characters.length; i+=1) {
         let ranIndex = Math.floor(Math.random()*characters.length)
-        if(arr.length < 15) {
+        if(arr.length < passwordLengthEl) {
             arr.push(characters[ranIndex])
             }
         }

@@ -14,9 +14,24 @@
   </head>
   <body>
     <div class="container">
-      <h1>Generate a <span class="green-text">random password</span></h1>
+      <h1>Generate a <span>random password</span></h1>
       <p>Never use an insecure password again.</p>
-      <button onclick="generatePassword()">GENERATE PASSWORD</button>
+      <form>
+        <div>
+          <p>Choose a password length from 8 to 20:</p>
+          <input
+            id="password-length-el"
+            type="number"
+            value="8"
+            min="8"
+            max="20"
+            required
+          />
+        </div>
+        <button type="button" onclick="generatePassword()">
+          GENERATE PASSWORD
+        </button>
+      </form>
       <div class="passwords-container">
         <p id="password-one-el">password 01</p>
         <p id="password-two-el">password 02</p>
