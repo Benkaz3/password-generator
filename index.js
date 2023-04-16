@@ -34,6 +34,44 @@ function generatePassword() {
         passwordTwoEl.textContent += passwordTwo[j]  
     }
 }
+// check for brower's permissions to read and write to local  computer
+// navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+//   if (result.state == "granted" || result.state == "prompt") {
+//     alert("Write access ranted!");
+//   }
+// });
+
+// navigator.permissions.query({ name: "clipboard-read" }).then((result) => {
+//   if (result.state == "granted" || result.state == "prompt") {
+//     alert("Read access ranted!");
+//   }
+// });
+
+// copy passwords to clipboard
+async function copyPass(elementID) {
+  try {
+    // Get the element
+    var element = document.getElementById(elementID);
+    // Get the text content of the element
+    var text = element.textContent;
+    // Copy the text to the clipboard
+    await navigator.clipboard.writeText(text);
+    alert('Password copied to clipboard');
+  } catch (err) {
+    alert('Failed to copy password: ', err);
+  }
+}
+
+function copyPassOne() {
+    copyPass("password-one-el")
+}
+
+function copyPassTwo() {
+    copyPass("password-two-el")
+}
+
+
+
 
 
 

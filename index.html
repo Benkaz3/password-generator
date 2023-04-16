@@ -4,6 +4,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -34,8 +38,18 @@
         </button>
       </form>
       <div class="passwords-container">
-        <p id="password-one-el">password 01</p>
-        <p id="password-two-el">password 02</p>
+        <div class="btn-container">
+          <p id="password-one-el">password 01</p>
+          <button class="btn btn-copy" onclick="copyPassOne()" id="copy-one-el">
+            <i class="fa fa-clone"></i>
+          </button>
+        </div>
+        <div class="btn-container">
+          <p id="password-two-el">password 02</p>
+          <button class="btn btn-copy" onclick="copyPassTwo()" id="copy-two-el">
+            <i class="fa fa-clone"></i>
+          </button>
+        </div>
       </div>
     </div>
 
